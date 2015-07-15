@@ -1,5 +1,11 @@
+import os
 
-
+if not os.path.exists("./output/FASTQ"):
+    os.makedirs("./output/FASTQ")
+if not os.path.exists("./output/ENA_reports"):
+    os.makedirs("./output/ENA_reports")
+     
+     
 # In case this is being run on a cluster then make sure that it is executed on the host node
 localrules: download
 
@@ -47,6 +53,7 @@ def links_runs(exp_ids, library_strategy):
     if not bool(dct): #if dict is empty
       print("There are no runs..")
     return dct
+
 
 
 
