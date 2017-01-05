@@ -1,0 +1,32 @@
+{
+    "ref": {
+        "version": "hg19",
+        "genome": "/data/akalin/Base/Genomes/hg19/",
+        "genome_index": "/data/akalin/Base/Genomes/hg19/Bisulfite/"
+    },
+    "samples": ["SRR2075691"]
+    ,
+    "tools":{
+      "bedtools": "/home/kwreczy/programs/bedtools-2.17.0/bin/bedtools",
+      "bowtie": "/home/kwreczy/.guix-profile/bin/bowtie2",
+      "bismark": "/home/kwreczy/programs/bismark_v0.16.3/bismark",
+      "genome_chrom_info": "/data/akalin/kasia/projects/HOT_DATA/hg19.chromInfo.txt",
+      "adapter":  "/home/kwreczy/programs/bbmap/resources/truseq.fa.gz",
+      "fastqc": "/home/kwreczy/programs/FastQC/fastqc",
+      "bbduk": "/home/kwreczy/programs/bbmap/bbduk2.sh",
+      "trim_galone": "/home/kwreczy/programs/trim_galore",
+      "cutadapt": "/home/kwreczy/.guix-profile/bin/cutadapt",
+      "genomeCoverageBed":"/home/kwreczy/programs/bedGraphToBigWig",
+      "samtools":"/home/kwreczy/.guix-profile/bin/",
+      "deduplicate_bismark":"~/programs/bismark_v0.16.3/deduplicate_bismark"
+    },
+    "output_dir": "~/",
+    "temp_dir": "~/",
+    "params":{
+      "TRIM_GALONE_LENGTH" : "20",
+      "SINGLE_END": "true",
+      "ADAPTER": "AGATCGGAAGAGC",
+      "BBDUK_ADAPTER": "/home/kwreczy/programs/bbmap/resources/adapters.fa",
+      "BBDUK_ADAPTER_TRUESEQ": "/home/kwreczy/programs/bbmap/resources/truseq.fa.gz"
+    }
+}
