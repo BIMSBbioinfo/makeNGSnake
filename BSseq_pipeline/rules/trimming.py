@@ -42,16 +42,16 @@ rule bbduk2:
     trimq={params.trimq} ktrim={params.ktrim} k={params.k} mink={params.mink} ref={params.a} hdist={params.hdist} \
     overwrite={params.overwrite} 2> {log}"
 
-rule trim_galone:
+rule trim_galore:
   input:
     "{sample}.fastq"
   output:
     "{sample}_trimmed.fq"
   params:
-    length = TRIM_GALONE_LENGTH
+    length = TRIM_GALORE_LENGTH
   log:
     "{sample}.fastq_trimming_report.txt"
-  message: """--- Trimming with Trim Galone!."""
+  message: """--- Trimming with Trim Galore!."""
   shell:
-    "{TRIM_GALONE} {input} --output_dir {OUTPUT_DIR} --length {params.length} --path_to_cutadapt {CUTADAPT}"
+    "{TRIM_GALORE} {input} --output_dir {OUTPUT_DIR} --length {params.length} --path_to_cutadapt {CUTADAPT}"
     

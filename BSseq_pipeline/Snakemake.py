@@ -25,7 +25,7 @@ GenomeCoverageBed = config["tools"]["genomeCoverageBed"]
 Deduplicate_Bismark = config["tools"]["deduplicate_bismark"]
 
 # parameters
-TRIM_GALONE_LENGTH = config["params"]["TRIM_GALONE_LENGTH"]
+TRIM_GALORE_LENGTH = config["params"]["TRIM_GALORE_LENGTH"]
 SINGLE_END = config["params"]["SINGLE_END"]
 ADAPTER = config["params"]["ADAPTER"]
 BBDUK_ADAPTER_ALL = config["params"]["BBDUK_ADAPTER"]
