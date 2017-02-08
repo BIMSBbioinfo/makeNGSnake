@@ -1,32 +1,35 @@
 {
+    "samples": [
+        "sampleA",
+        "sampleB"
+    ],
+    "unit": {
+        "sampleA": [
+            "sampleA.pe1",
+            "sampleA.pe2"
+        ],
+        "sampleB": [
+            "sampleB.pe1",
+            "sampleB.pe2"
+        ]    
+    },
     "ref": {
-        "version": "hg19",
-        "genome": "/data/akalin/Base/Genomes/hg19/",
-        "genome_index": "/data/akalin/Base/Genomes/hg19/Bisulfite/"
+        "version": "ce10",
+        "genome": "Base/Genomes/ce10/",
+        "genome_index": "Base/GenomeIndices/ce10/"
     },
-    "samples": ["SRR2075691"]
-    ,
-    "tools":{
-      "bedtools": "/home/kwreczy/programs/bedtools-2.17.0/bin/bedtools",
-      "bowtie": "/home/kwreczy/.guix-profile/bin/bowtie2",
-      "bismark": "/home/kwreczy/programs/bismark_v0.16.3/bismark",
-      "genome_chrom_info": "/data/akalin/kasia/projects/HOT_DATA/hg19.chromInfo.txt",
-      "adapter":  "/home/kwreczy/programs/bbmap/resources/truseq.fa.gz",
-      "fastqc": "/home/kwreczy/programs/FastQC/fastqc",
-      "bbduk": "/home/kwreczy/programs/bbmap/bbduk2.sh",
-      "trim_galore": "/home/kwreczy/programs/trim_galore",
-      "cutadapt": "/home/kwreczy/.guix-profile/bin/cutadapt",
-      "genomeCoverageBed":"/home/kwreczy/programs/bedGraphToBigWig",
-      "samtools":"/home/kwreczy/.guix-profile/bin/",
-      "deduplicate_bismark":"~/programs/bismark_v0.16.3/deduplicate_bismark"
+    "tools": {
+        "fastqc": "/home/agosdsc/tools/qc/FastQC/fastqc",
+        "trimgalore": "/home/agosdsc/tools/trimming/Trim_galore/trim_galore",
+        "cutadapt": "/home/agosdsc/.guix-profile/bin/cutadapt",
+        "bowtie2": "/home/agosdsc/.guix-profile/bin/bowtie2" ,
+        "bismark_genome_preparation": "/home/agosdsc/tools/bs-mapping/bismark_v0.16.3/bismark_genome_preparation",
+        "bismark": "/home/agosdsc/tools/bs-mapping/bismark_v0.16.3/bismark",
+        "bismark_methylation_extractor": "/home/agosdsc/tools/bs-mapping/bismark_v0.16.3/bismark_methylation_extractor",
+        "deduplicate_bismark": "/home/agosdsc/tools/bs-mapping/bismark_v0.16.3/deduplicate_bismark",
+        "bismark2report": "/home/agosdsc/tools/bs-mapping/bismark_v0.16.3/bismark2report" 
     },
-    "output_dir": "~/",
-    "temp_dir": "~/",
-    "params":{
-      "TRIM_GALORE_LENGTH" : "20",
-      "SINGLE_END": "true",
-      "ADAPTER": "AGATCGGAAGAGC",
-      "BBDUK_ADAPTER": "/home/kwreczy/programs/bbmap/resources/adapters.fa",
-      "BBDUK_ADAPTER_TRUESEQ": "/home/kwreczy/programs/bbmap/resources/truseq.fa.gz"
+    "misc": {
+        "work_dir": "/home/agosdsc/test/bs_seq/Data"
     }
 }
